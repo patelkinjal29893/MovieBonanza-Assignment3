@@ -15,6 +15,6 @@ namespace MovieBonanza_Assignment3
         public SelectionForm()
         {
             InitializeComponent();
-        }
+        }        
     }
 }
