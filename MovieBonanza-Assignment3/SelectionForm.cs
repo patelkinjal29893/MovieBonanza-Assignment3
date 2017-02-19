@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MovieBonanza_Assignment3
 {
-    public partial class Form1 : Form
+    public partial class SelectionForm : Form
     {
-        public Form1()
+        public SelectionForm()
         {
             InitializeComponent();
         }
