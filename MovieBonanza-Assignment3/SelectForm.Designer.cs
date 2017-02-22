@@ -1,6 +1,6 @@
 ﻿namespace MovieBonanza_Assignment3
 {
-    partial class SelectionForm
+    partial class SelectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,13 +32,13 @@
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.YourSelectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.SmallGraphicsPictureBox = new System.Windows.Forms.PictureBox();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.TitleTextbox = new System.Windows.Forms.TextBox();
-            this.CostLabel = new System.Windows.Forms.Label();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.CostTextBox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
-            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.TitleTextbox = new System.Windows.Forms.TextBox();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.SmallGraphicsPictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.YourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SmallGraphicsPictureBox)).BeginInit();
@@ -77,12 +77,12 @@
             "Just Go With It",
             "No Strings Attached",
             "Real Steel",
-            "Season of\tthe Witch ",
+            "Season of the Witch ",
             "The Dilemma",
             "The Eagle",
             "The Green Hornet",
             "The Mechanic",
-            "The Other\tWoman",
+            "The Other Woman",
             "The Rite Horror Sanctum",
             "The Roommate",
             "The Way Back",
@@ -110,39 +110,13 @@
             this.YourSelectionGroupBox.TabStop = false;
             this.YourSelectionGroupBox.Text = "Your Selection";
             // 
-            // SmallGraphicsPictureBox
+            // CategoryTextBox
             // 
-            this.SmallGraphicsPictureBox.Location = new System.Drawing.Point(16, 29);
-            this.SmallGraphicsPictureBox.Name = "SmallGraphicsPictureBox";
-            this.SmallGraphicsPictureBox.Size = new System.Drawing.Size(100, 114);
-            this.SmallGraphicsPictureBox.TabIndex = 0;
-            this.SmallGraphicsPictureBox.TabStop = false;
-            // 
-            // TitleLabel
-            // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(151, 22);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(41, 21);
-            this.TitleLabel.TabIndex = 1;
-            this.TitleLabel.Text = "Title";
-            // 
-            // TitleTextbox
-            // 
-            this.TitleTextbox.Location = new System.Drawing.Point(154, 46);
-            this.TitleTextbox.Name = "TitleTextbox";
-            this.TitleTextbox.ReadOnly = true;
-            this.TitleTextbox.Size = new System.Drawing.Size(242, 26);
-            this.TitleTextbox.TabIndex = 2;
-            // 
-            // CostLabel
-            // 
-            this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(322, 80);
-            this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(43, 21);
-            this.CostLabel.TabIndex = 1;
-            this.CostLabel.Text = "Cost";
+            this.CategoryTextBox.Location = new System.Drawing.Point(154, 104);
+            this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.ReadOnly = true;
+            this.CategoryTextBox.Size = new System.Drawing.Size(152, 26);
+            this.CategoryTextBox.TabIndex = 2;
             // 
             // CostTextBox
             // 
@@ -161,13 +135,39 @@
             this.CategoryLabel.TabIndex = 1;
             this.CategoryLabel.Text = "Category";
             // 
-            // CategoryTextBox
+            // CostLabel
             // 
-            this.CategoryTextBox.Location = new System.Drawing.Point(154, 104);
-            this.CategoryTextBox.Name = "CategoryTextBox";
-            this.CategoryTextBox.ReadOnly = true;
-            this.CategoryTextBox.Size = new System.Drawing.Size(152, 26);
-            this.CategoryTextBox.TabIndex = 2;
+            this.CostLabel.AutoSize = true;
+            this.CostLabel.Location = new System.Drawing.Point(322, 80);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(43, 21);
+            this.CostLabel.TabIndex = 1;
+            this.CostLabel.Text = "Cost";
+            // 
+            // TitleTextbox
+            // 
+            this.TitleTextbox.Location = new System.Drawing.Point(154, 46);
+            this.TitleTextbox.Name = "TitleTextbox";
+            this.TitleTextbox.ReadOnly = true;
+            this.TitleTextbox.Size = new System.Drawing.Size(242, 26);
+            this.TitleTextbox.TabIndex = 2;
+            // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Location = new System.Drawing.Point(151, 22);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(41, 21);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Title";
+            // 
+            // SmallGraphicsPictureBox
+            // 
+            this.SmallGraphicsPictureBox.Location = new System.Drawing.Point(16, 29);
+            this.SmallGraphicsPictureBox.Name = "SmallGraphicsPictureBox";
+            this.SmallGraphicsPictureBox.Size = new System.Drawing.Size(100, 114);
+            this.SmallGraphicsPictureBox.TabIndex = 0;
+            this.SmallGraphicsPictureBox.TabStop = false;
             // 
             // NextButton
             // 
