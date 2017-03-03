@@ -39,14 +39,13 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CancelButton = new System.Windows.Forms.Button();
             this.MovieSelectedGroupBox = new System.Windows.Forms.GroupBox();
-            this.PictureBox = new System.Windows.Forms.PictureBox();
+            this.LargeGraphicsPictureBox = new System.Windows.Forms.PictureBox();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
             this.OrderDVDCheckBox = new System.Windows.Forms.CheckBox();
-            this.AdditionalChargeTextBox = new System.Windows.Forms.TextBox();
             this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
             this.GrandTotalTextBox = new System.Windows.Forms.TextBox();
             this.SubTotalTextBox = new System.Windows.Forms.TextBox();
@@ -54,13 +53,12 @@
             this.GrandTotalLabel = new System.Windows.Forms.Label();
             this.SalesTaxLabel = new System.Windows.Forms.Label();
             this.SubTotalLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.CostLabel = new System.Windows.Forms.Label();
             this.StreamButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LargeGraphicsPictureBox)).BeginInit();
             this.YourOrderGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,7 +141,7 @@
             // 
             // MovieSelectedGroupBox
             // 
-            this.MovieSelectedGroupBox.Controls.Add(this.PictureBox);
+            this.MovieSelectedGroupBox.Controls.Add(this.LargeGraphicsPictureBox);
             this.MovieSelectedGroupBox.Controls.Add(this.CategoryTextBox);
             this.MovieSelectedGroupBox.Controls.Add(this.TitleTextBox);
             this.MovieSelectedGroupBox.Controls.Add(this.CategoryLabel);
@@ -155,13 +153,13 @@
             this.MovieSelectedGroupBox.TabStop = false;
             this.MovieSelectedGroupBox.Text = "Movie Selected";
             // 
-            // PictureBox
+            // LargeGraphicsPictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(10, 116);
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(172, 181);
-            this.PictureBox.TabIndex = 3;
-            this.PictureBox.TabStop = false;
+            this.LargeGraphicsPictureBox.Location = new System.Drawing.Point(10, 116);
+            this.LargeGraphicsPictureBox.Name = "LargeGraphicsPictureBox";
+            this.LargeGraphicsPictureBox.Size = new System.Drawing.Size(172, 181);
+            this.LargeGraphicsPictureBox.TabIndex = 3;
+            this.LargeGraphicsPictureBox.TabStop = false;
             // 
             // CategoryTextBox
             // 
@@ -200,7 +198,6 @@
             // YourOrderGroupBox
             // 
             this.YourOrderGroupBox.Controls.Add(this.OrderDVDCheckBox);
-            this.YourOrderGroupBox.Controls.Add(this.AdditionalChargeTextBox);
             this.YourOrderGroupBox.Controls.Add(this.SalesTaxTextBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalTextBox);
             this.YourOrderGroupBox.Controls.Add(this.SubTotalTextBox);
@@ -208,7 +205,6 @@
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalLabel);
             this.YourOrderGroupBox.Controls.Add(this.SalesTaxLabel);
             this.YourOrderGroupBox.Controls.Add(this.SubTotalLabel);
-            this.YourOrderGroupBox.Controls.Add(this.label1);
             this.YourOrderGroupBox.Controls.Add(this.CostLabel);
             this.YourOrderGroupBox.Location = new System.Drawing.Point(246, 37);
             this.YourOrderGroupBox.Name = "YourOrderGroupBox";
@@ -226,15 +222,6 @@
             this.OrderDVDCheckBox.TabIndex = 3;
             this.OrderDVDCheckBox.Text = "Order the DVD(adds $10 to Your Order)";
             this.OrderDVDCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AdditionalChargeTextBox
-            // 
-            this.AdditionalChargeTextBox.Location = new System.Drawing.Point(96, 64);
-            this.AdditionalChargeTextBox.Name = "AdditionalChargeTextBox";
-            this.AdditionalChargeTextBox.ReadOnly = true;
-            this.AdditionalChargeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.AdditionalChargeTextBox.TabIndex = 2;
-            this.AdditionalChargeTextBox.Visible = false;
             // 
             // SalesTaxTextBox
             // 
@@ -295,15 +282,6 @@
             this.SubTotalLabel.TabIndex = 0;
             this.SubTotalLabel.Text = "Sub Total";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Visible = false;
-            // 
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
@@ -355,7 +333,7 @@
             this.menuStrip.PerformLayout();
             this.MovieSelectedGroupBox.ResumeLayout(false);
             this.MovieSelectedGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LargeGraphicsPictureBox)).EndInit();
             this.YourOrderGroupBox.ResumeLayout(false);
             this.YourOrderGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -375,7 +353,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.GroupBox MovieSelectedGroupBox;
-        private System.Windows.Forms.PictureBox PictureBox;
+        private System.Windows.Forms.PictureBox LargeGraphicsPictureBox;
         private System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.TextBox TitleTextBox;
         private System.Windows.Forms.Label CategoryLabel;
@@ -390,7 +368,6 @@
         private System.Windows.Forms.Label SubTotalLabel;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Button StreamButton;
-        private System.Windows.Forms.TextBox AdditionalChargeTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox OrderDVDCheckBox;
         private System.Windows.Forms.Button BackButton;

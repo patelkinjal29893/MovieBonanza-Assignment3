@@ -6,17 +6,27 @@ using System.Windows.Forms;
 
 namespace MovieBonanza_Assignment3
 {
-    static class Program
+    public static class Program
     {
+        //public static form objects
+        public static SplashForm mySplashForm;  
+        public static SelectForm mySelectForm;
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectForm());
+
+            //Initialize SplashForm and SelectForm
+            Program.mySplashForm = new SplashForm();
+            Program.mySelectForm = new SelectForm();
+
+            Application.Run(Program.mySplashForm);
         }
     }
 }
