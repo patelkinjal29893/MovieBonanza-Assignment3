@@ -19,6 +19,7 @@ namespace MovieBonanza_Assignment3
 {
     public partial class OrderForm : Form
     {
+        public Form previousForm;
         public OrderForm()
         {
             InitializeComponent();

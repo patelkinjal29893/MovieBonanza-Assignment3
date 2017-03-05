@@ -30,7 +30,7 @@
         {
             this.HeadingLabel = new System.Windows.Forms.Label();
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.MovieNamesListBox = new System.Windows.Forms.ListBox();
             this.YourSelectionGroupBox = new System.Windows.Forms.GroupBox();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.CostTextBox = new System.Windows.Forms.TextBox();
@@ -64,10 +64,10 @@
             this.CurrentMoviesLabel.TabIndex = 1;
             this.CurrentMoviesLabel.Text = "Current Movies";
             // 
-            // listBox1
+            // MovieNamesListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
+            this.MovieNamesListBox.FormattingEnabled = true;
+            this.MovieNamesListBox.Items.AddRange(new object[] {
             "Cedar Rapids ",
             "Company\tMen",
             "Death Race 2",
@@ -87,11 +87,12 @@
             "The Roommate",
             "The Way Back",
             "Waiting for Forever"});
-            this.listBox1.Location = new System.Drawing.Point(51, 102);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 225);
-            this.listBox1.Sorted = true;
-            this.listBox1.TabIndex = 2;
+            this.MovieNamesListBox.Location = new System.Drawing.Point(51, 102);
+            this.MovieNamesListBox.Name = "MovieNamesListBox";
+            this.MovieNamesListBox.Size = new System.Drawing.Size(120, 225);
+            this.MovieNamesListBox.Sorted = true;
+            this.MovieNamesListBox.TabIndex = 2;
+            this.MovieNamesListBox.SelectedIndexChanged += new System.EventHandler(this.MovieNamesListBox_SelectedIndexChanged);
             // 
             // YourSelectionGroupBox
             // 
@@ -178,8 +179,9 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // SelectionForm
+            // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,12 +189,12 @@
             this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.YourSelectionGroupBox);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.MovieNamesListBox);
             this.Controls.Add(this.CurrentMoviesLabel);
             this.Controls.Add(this.HeadingLabel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SelectionForm";
+            this.Name = "SelectForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza - Your Online Streaming Service";
@@ -208,7 +210,7 @@
 
         private System.Windows.Forms.Label HeadingLabel;
         private System.Windows.Forms.Label CurrentMoviesLabel;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox MovieNamesListBox;
         private System.Windows.Forms.GroupBox YourSelectionGroupBox;
         private System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.TextBox CostTextBox;

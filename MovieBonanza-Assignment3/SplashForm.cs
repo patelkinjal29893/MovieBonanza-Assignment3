@@ -32,13 +32,15 @@ namespace MovieBonanza_Assignment3
         private void SplashTimer_Tick(object sender, EventArgs e)
         {
             //It will enabled the Timer
-            this.Enabled = false;
+            SplashTimer.Enabled = false;
 
             //It will hide the SplashForm 
             this.Hide();
 
+            SelectForm mySelectForm = new SelectForm();
+
             //Display the Next SelectionForm
-            Program.mySelectForm.Show();
+            mySelectForm.Show();
         }
     }
 }
