@@ -122,6 +122,7 @@ namespace MovieBonanza_Assignment3
         /// </summary>
         private void CalculateCost()
         {
+            //Private Variables(Double to Store Value into two Decimal Values)
             double _movieCost = Convert.ToDouble(CostTextBox.Text);
             double _additionalCharge = 0.00;
             double _subTotal;
@@ -173,7 +174,11 @@ namespace MovieBonanza_Assignment3
             //Call the Calculate Function into Load Event
             CalculateCost();
         }
-
+        /// <summary>
+        /// This is Checkbox Change event for making TextBox and Label Visible and Hide
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderDVDCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if(OrderDVDCheckBox.Checked == true)

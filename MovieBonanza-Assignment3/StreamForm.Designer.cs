@@ -90,6 +90,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Movie is about to Start!";
+            this.Load += new System.EventHandler(this.StreamForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,10 +23,29 @@ namespace MovieBonanza_Assignment3
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This is Ok Button Click Event for Exit From Application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OkButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+           Application.Exit();
+        }
+        /// <summary>
+        /// Handler for Load Stream Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StreamForm_Load(object sender, EventArgs e)
+        {
+            //It takes Total and MovieName from classes
+            double _grandTotal = Program.order.grandTotal;
+            string movieSelected = Program.movie.movieTitle;
+
+            //Shows Movie Cost and Name in appropriate Formats
+            ChargeLabel.Text = String.Format("Your Credit Card will be Charged ${0:0.00}", _grandTotal);
+            MovieSelectedLabel.Text = movieSelected + "will begin Streaming Shortly";
         }
     }
 }
