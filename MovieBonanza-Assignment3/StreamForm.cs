@@ -44,8 +44,8 @@ namespace MovieBonanza_Assignment3
             string movieSelected = Program.movie.movieTitle;
 
             //Shows Movie Cost and Name in appropriate Formats
-            ChargeLabel.Text = String.Format("Your Credit Card will be Charged ${0:0.00}", _grandTotal);
-            MovieSelectedLabel.Text = movieSelected + "will begin Streaming Shortly";
+            ChargeLabel.Text = String.Format("Your Credit Card will be Charged ${0:0.00} ", _grandTotal);
+            MovieSelectedLabel.Text = movieSelected + " will begin Streaming Shortly";
         }
     }
 }

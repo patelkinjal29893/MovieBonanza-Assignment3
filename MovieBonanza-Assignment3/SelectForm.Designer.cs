@@ -114,6 +114,7 @@
             // 
             // CategoryTextBox
             // 
+            this.CategoryTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryTextBox.Location = new System.Drawing.Point(154, 104);
             this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.ReadOnly = true;
@@ -122,6 +123,7 @@
             // 
             // CostTextBox
             // 
+            this.CostTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CostTextBox.Location = new System.Drawing.Point(326, 104);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.ReadOnly = true;
@@ -148,6 +150,7 @@
             // 
             // TitleTextbox
             // 
+            this.TitleTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleTextbox.Location = new System.Drawing.Point(154, 46);
             this.TitleTextbox.Name = "TitleTextbox";
             this.TitleTextbox.ReadOnly = true;

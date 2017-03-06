@@ -36,9 +36,9 @@
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(145, 134);
+            this.OkButton.Location = new System.Drawing.Point(156, 202);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(47, 23);
+            this.OkButton.Size = new System.Drawing.Size(47, 27);
             this.OkButton.TabIndex = 0;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             this.ThankYouLabel.AutoSize = true;
             this.ThankYouLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThankYouLabel.Location = new System.Drawing.Point(-2, 32);
+            this.ThankYouLabel.Location = new System.Drawing.Point(11, 44);
             this.ThankYouLabel.Name = "ThankYouLabel";
             this.ThankYouLabel.Size = new System.Drawing.Size(343, 24);
             this.ThankYouLabel.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.ChargeLabel.AutoSize = true;
             this.ChargeLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.ChargeLabel.Location = new System.Drawing.Point(12, 68);
+            this.ChargeLabel.Location = new System.Drawing.Point(37, 98);
             this.ChargeLabel.Name = "ChargeLabel";
             this.ChargeLabel.Size = new System.Drawing.Size(317, 21);
             this.ChargeLabel.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.MovieSelectedLabel.AutoSize = true;
             this.MovieSelectedLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MovieSelectedLabel.Location = new System.Drawing.Point(52, 103);
+            this.MovieSelectedLabel.Location = new System.Drawing.Point(62, 151);
             this.MovieSelectedLabel.Name = "MovieSelectedLabel";
             this.MovieSelectedLabel.Size = new System.Drawing.Size(247, 18);
             this.MovieSelectedLabel.TabIndex = 2;
@@ -76,14 +76,15 @@
             // 
             // StreamForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 169);
+            this.ClientSize = new System.Drawing.Size(366, 242);
             this.ControlBox = false;
             this.Controls.Add(this.MovieSelectedLabel);
             this.Controls.Add(this.ChargeLabel);
             this.Controls.Add(this.ThankYouLabel);
             this.Controls.Add(this.OkButton);
+            this.Font = new System.Drawing.Font("Franklin Gothic Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StreamForm";
