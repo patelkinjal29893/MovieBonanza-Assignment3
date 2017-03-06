@@ -68,22 +68,23 @@
             // 
             this.MovieNamesListBox.FormattingEnabled = true;
             this.MovieNamesListBox.Items.AddRange(new object[] {
-            "Cedar Rapids ",
-            "Company\tMen",
+            "Cedar Rapids",
+            "Company Men",
             "Death Race 2",
-            "Footloose ",
+            "Footloose",
             "Gnomeo and Juliet",
             "I am Number Four",
             "Just Go With It",
             "No Strings Attached",
             "Real Steel",
-            "Season of the Witch ",
+            "Sanctum",
+            "Season of the Witch",
             "The Dilemma",
             "The Eagle",
             "The Green Hornet",
             "The Mechanic",
             "The Other Woman",
-            "The Rite Horror Sanctum",
+            "The Rite",
             "The Roommate",
             "The Way Back",
             "Waiting for Forever"});
@@ -198,6 +199,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza - Your Online Streaming Service";
+            this.Load += new System.EventHandler(this.SelectForm_Load);
             this.YourSelectionGroupBox.ResumeLayout(false);
             this.YourSelectionGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SmallGraphicsPictureBox)).EndInit();

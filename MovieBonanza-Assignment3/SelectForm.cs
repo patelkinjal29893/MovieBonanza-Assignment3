@@ -9,7 +9,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,7 +59,7 @@ namespace MovieBonanza_Assignment3
         {
             string _categoryType = "";
 
-            if (MovieNamesListBox.SelectedItem.ToString().Equals("Season of the Witch")
+            if(MovieNamesListBox.SelectedItem.ToString().Equals("Season of the Witch")
                 || MovieNamesListBox.SelectedItem.ToString().Equals("I am Number Four"))
             {
                 _categoryType = "Sci-Fi";
@@ -104,7 +106,7 @@ namespace MovieBonanza_Assignment3
             }
 
             if (MovieNamesListBox.SelectedItem.ToString().Equals("Footloose")
-                || MovieNamesListBox.SelectedItem.ToString().Equals("Real Steal"))
+                || MovieNamesListBox.SelectedItem.ToString().Equals("Real Steel"))
             {
                 _categoryType = "New Release";
             }
@@ -122,17 +124,17 @@ namespace MovieBonanza_Assignment3
             {
                 _movieCost = 1.99;
             }
-            if (getCategoryType().Equals("Action")
+            if(getCategoryType().Equals("Action")
                 || getCategoryType().Equals("Sci-Fi")
                 || getCategoryType().Equals("Horror"))
             {
                 _movieCost = 2.99;
             }
-            if (getCategoryType().Equals("Family"))
+            if(getCategoryType().Equals("Family"))
             {
                 _movieCost = 0.99;
             }
-            if (getCategoryType().Equals("New Releases"))
+            if(getCategoryType().Equals("New Release"))
             {
                 _movieCost = 4.99;
             }
@@ -154,14 +156,26 @@ namespace MovieBonanza_Assignment3
             //Get all Selected Items and Store into an Object
             movieSelected = MovieNamesListBox.SelectedItem.ToString();
 
-            //Create a String Variable to 
+            //Create a String Variable to store selected movies
             string[] movie = { movieSelected, getCategoryType(), getMovieCost() };
             movieDetail = movie;
 
+
+            Environment.CurrentDirectory = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAsse‌​mbly().Location), "../../Properties/");
+            SmallGraphicsPictureBox.ImageLocation = Environment.CurrentDirectory + "/" + movieDetail.GetValue(0).ToString() + ".jpg";
+            SmallGraphicsPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            
+            //Display the Different selected values into different Textboxes
             TitleTextbox.Text = movieDetail.GetValue(0).ToString();
             CategoryTextBox.Text = movieDetail.GetValue(1).ToString();
             CostTextBox.Text = movieDetail.GetValue(2).ToString();
 
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            //Create an Object of Movie Class
+            Movie myMovie = new Movie();
         }
     }
 }

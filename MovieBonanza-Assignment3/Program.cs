@@ -10,6 +10,7 @@ namespace MovieBonanza_Assignment3
     {
         //Created an Object of Movie Class
         public static Movie movie = new Movie();
+        public static Order order = new Order();
 
         /// <summary>
         /// The main entry point for the application.

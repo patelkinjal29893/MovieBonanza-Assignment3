@@ -31,15 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StreamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.CancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CancelButton = new System.Windows.Forms.Button();
             this.MovieSelectedGroupBox = new System.Windows.Forms.GroupBox();
-            this.LargeGraphicsPictureBox = new System.Windows.Forms.PictureBox();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
@@ -56,10 +53,15 @@
             this.CostLabel = new System.Windows.Forms.Label();
             this.StreamButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.LargeGraphicsPictureBox = new System.Windows.Forms.PictureBox();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StreamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdditionalChargesLabel = new System.Windows.Forms.Label();
+            this.AdditionalChargesTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LargeGraphicsPictureBox)).BeginInit();
             this.YourOrderGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LargeGraphicsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -69,7 +71,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(488, 24);
+            this.menuStrip.Size = new System.Drawing.Size(541, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -84,24 +86,6 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
-            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.printToolStripMenuItem.Text = "&Print";
-            // 
-            // StreamToolStripMenuItem
-            // 
-            this.StreamToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("StreamToolStripMenuItem.Image")));
-            this.StreamToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem";
-            this.StreamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.StreamToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.StreamToolStripMenuItem.Text = "Strea&m";
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -113,6 +97,7 @@
             this.CancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.CancelToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.CancelToolStripMenuItem.Text = "Canc&el";
+            this.CancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -128,10 +113,11 @@
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(359, 328);
+            this.CancelButton.Location = new System.Drawing.Point(392, 328);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(50, 23);
             this.CancelButton.TabIndex = 1;
@@ -152,14 +138,6 @@
             this.MovieSelectedGroupBox.TabIndex = 2;
             this.MovieSelectedGroupBox.TabStop = false;
             this.MovieSelectedGroupBox.Text = "Movie Selected";
-            // 
-            // LargeGraphicsPictureBox
-            // 
-            this.LargeGraphicsPictureBox.Location = new System.Drawing.Point(10, 116);
-            this.LargeGraphicsPictureBox.Name = "LargeGraphicsPictureBox";
-            this.LargeGraphicsPictureBox.Size = new System.Drawing.Size(172, 181);
-            this.LargeGraphicsPictureBox.TabIndex = 3;
-            this.LargeGraphicsPictureBox.TabStop = false;
             // 
             // CategoryTextBox
             // 
@@ -201,14 +179,16 @@
             this.YourOrderGroupBox.Controls.Add(this.SalesTaxTextBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalTextBox);
             this.YourOrderGroupBox.Controls.Add(this.SubTotalTextBox);
+            this.YourOrderGroupBox.Controls.Add(this.AdditionalChargesTextBox);
             this.YourOrderGroupBox.Controls.Add(this.CostTextBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalLabel);
             this.YourOrderGroupBox.Controls.Add(this.SalesTaxLabel);
+            this.YourOrderGroupBox.Controls.Add(this.AdditionalChargesLabel);
             this.YourOrderGroupBox.Controls.Add(this.SubTotalLabel);
             this.YourOrderGroupBox.Controls.Add(this.CostLabel);
             this.YourOrderGroupBox.Location = new System.Drawing.Point(246, 37);
             this.YourOrderGroupBox.Name = "YourOrderGroupBox";
-            this.YourOrderGroupBox.Size = new System.Drawing.Size(230, 263);
+            this.YourOrderGroupBox.Size = new System.Drawing.Size(283, 263);
             this.YourOrderGroupBox.TabIndex = 3;
             this.YourOrderGroupBox.TabStop = false;
             this.YourOrderGroupBox.Text = "Your Order";
@@ -216,16 +196,17 @@
             // OrderDVDCheckBox
             // 
             this.OrderDVDCheckBox.AutoSize = true;
-            this.OrderDVDCheckBox.Location = new System.Drawing.Point(12, 208);
+            this.OrderDVDCheckBox.Location = new System.Drawing.Point(25, 215);
             this.OrderDVDCheckBox.Name = "OrderDVDCheckBox";
             this.OrderDVDCheckBox.Size = new System.Drawing.Size(212, 17);
             this.OrderDVDCheckBox.TabIndex = 3;
             this.OrderDVDCheckBox.Text = "Order the DVD(adds $10 to Your Order)";
             this.OrderDVDCheckBox.UseVisualStyleBackColor = true;
+            this.OrderDVDCheckBox.CheckedChanged += new System.EventHandler(this.OrderDVDCheckBox_CheckedChanged);
             // 
             // SalesTaxTextBox
             // 
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(96, 131);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(155, 131);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 20);
@@ -233,7 +214,7 @@
             // 
             // GrandTotalTextBox
             // 
-            this.GrandTotalTextBox.Location = new System.Drawing.Point(96, 163);
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(155, 163);
             this.GrandTotalTextBox.Name = "GrandTotalTextBox";
             this.GrandTotalTextBox.ReadOnly = true;
             this.GrandTotalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -241,7 +222,7 @@
             // 
             // SubTotalTextBox
             // 
-            this.SubTotalTextBox.Location = new System.Drawing.Point(96, 97);
+            this.SubTotalTextBox.Location = new System.Drawing.Point(155, 97);
             this.SubTotalTextBox.Name = "SubTotalTextBox";
             this.SubTotalTextBox.ReadOnly = true;
             this.SubTotalTextBox.Size = new System.Drawing.Size(100, 20);
@@ -249,7 +230,7 @@
             // 
             // CostTextBox
             // 
-            this.CostTextBox.Location = new System.Drawing.Point(96, 30);
+            this.CostTextBox.Location = new System.Drawing.Point(155, 30);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(100, 20);
@@ -258,7 +239,7 @@
             // GrandTotalLabel
             // 
             this.GrandTotalLabel.AutoSize = true;
-            this.GrandTotalLabel.Location = new System.Drawing.Point(26, 166);
+            this.GrandTotalLabel.Location = new System.Drawing.Point(51, 166);
             this.GrandTotalLabel.Name = "GrandTotalLabel";
             this.GrandTotalLabel.Size = new System.Drawing.Size(63, 13);
             this.GrandTotalLabel.TabIndex = 0;
@@ -267,7 +248,7 @@
             // SalesTaxLabel
             // 
             this.SalesTaxLabel.AutoSize = true;
-            this.SalesTaxLabel.Location = new System.Drawing.Point(9, 134);
+            this.SalesTaxLabel.Location = new System.Drawing.Point(34, 134);
             this.SalesTaxLabel.Name = "SalesTaxLabel";
             this.SalesTaxLabel.Size = new System.Drawing.Size(80, 13);
             this.SalesTaxLabel.TabIndex = 0;
@@ -276,7 +257,7 @@
             // SubTotalLabel
             // 
             this.SubTotalLabel.AutoSize = true;
-            this.SubTotalLabel.Location = new System.Drawing.Point(36, 100);
+            this.SubTotalLabel.Location = new System.Drawing.Point(61, 100);
             this.SubTotalLabel.Name = "SubTotalLabel";
             this.SubTotalLabel.Size = new System.Drawing.Size(53, 13);
             this.SubTotalLabel.TabIndex = 0;
@@ -285,7 +266,7 @@
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(61, 30);
+            this.CostLabel.Location = new System.Drawing.Point(86, 33);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(28, 13);
             this.CostLabel.TabIndex = 0;
@@ -293,13 +274,13 @@
             // 
             // StreamButton
             // 
-            this.StreamButton.Location = new System.Drawing.Point(415, 329);
+            this.StreamButton.Location = new System.Drawing.Point(460, 328);
             this.StreamButton.Name = "StreamButton";
             this.StreamButton.Size = new System.Drawing.Size(55, 23);
             this.StreamButton.TabIndex = 1;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
-            this.StreamButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // BackButton
             // 
@@ -309,12 +290,60 @@
             this.BackButton.TabIndex = 4;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // LargeGraphicsPictureBox
+            // 
+            this.LargeGraphicsPictureBox.Location = new System.Drawing.Point(10, 116);
+            this.LargeGraphicsPictureBox.Name = "LargeGraphicsPictureBox";
+            this.LargeGraphicsPictureBox.Size = new System.Drawing.Size(172, 181);
+            this.LargeGraphicsPictureBox.TabIndex = 3;
+            this.LargeGraphicsPictureBox.TabStop = false;
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            // 
+            // StreamToolStripMenuItem
+            // 
+            this.StreamToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("StreamToolStripMenuItem.Image")));
+            this.StreamToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem";
+            this.StreamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.StreamToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.StreamToolStripMenuItem.Text = "Strea&m";
+            this.StreamToolStripMenuItem.Click += new System.EventHandler(this.StreamToolStripMenuItem_Click);
+            // 
+            // AdditionalChargesLabel
+            // 
+            this.AdditionalChargesLabel.AutoSize = true;
+            this.AdditionalChargesLabel.Location = new System.Drawing.Point(13, 66);
+            this.AdditionalChargesLabel.Name = "AdditionalChargesLabel";
+            this.AdditionalChargesLabel.Size = new System.Drawing.Size(95, 13);
+            this.AdditionalChargesLabel.TabIndex = 0;
+            this.AdditionalChargesLabel.Text = "Additional Charges";
+            this.AdditionalChargesLabel.Visible = false;
+            // 
+            // AdditionalChargesTextBox
+            // 
+            this.AdditionalChargesTextBox.Location = new System.Drawing.Point(155, 63);
+            this.AdditionalChargesTextBox.Name = "AdditionalChargesTextBox";
+            this.AdditionalChargesTextBox.ReadOnly = true;
+            this.AdditionalChargesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.AdditionalChargesTextBox.TabIndex = 1;
+            this.AdditionalChargesTextBox.Visible = false;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 364);
+            this.ClientSize = new System.Drawing.Size(541, 364);
             this.ControlBox = false;
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.YourOrderGroupBox);
@@ -329,13 +358,14 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Order";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.MovieSelectedGroupBox.ResumeLayout(false);
             this.MovieSelectedGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LargeGraphicsPictureBox)).EndInit();
             this.YourOrderGroupBox.ResumeLayout(false);
             this.YourOrderGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LargeGraphicsPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,5 +401,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox OrderDVDCheckBox;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.TextBox AdditionalChargesTextBox;
+        private System.Windows.Forms.Label AdditionalChargesLabel;
     }
 }
